@@ -1,0 +1,4 @@
+newmtl Material
+map_Kd Albedo Map.png
+map_Ke Emission Map.png
+map_Ks Specular Map.png

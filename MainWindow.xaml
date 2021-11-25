@@ -1,0 +1,30 @@
+﻿<Window x:Class="Laba1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_3DModelViewer"
+        mc:Ignorable="d"
+        KeyDown="Window_KeyDown"
+        Title="MainWindow" Height="658" Width="1103">
+    <Grid Name="mainGrid" Background="#FFEEEEEE" Margin="0,0,2,0">
+        <Label Content="aspect" HorizontalAlignment="Left" Margin="17,23,0,0" VerticalAlignment="Top" AutomationProperties.Name="cameraPosition"/>
+        <Label Content="FOV" HorizontalAlignment="Left" Margin="66,23,0,0" VerticalAlignment="Top" AutomationProperties.Name="cameraPosition"/>
+        <Label Content="ZFar" HorizontalAlignment="Left" Margin="118,23,0,0" VerticalAlignment="Top" AutomationProperties.Name="cameraPosition"/>
+        <Label Content="ZNear" HorizontalAlignment="Left" Margin="170,23,0,0" VerticalAlignment="Top" AutomationProperties.Name="cameraPosition"/>
+        <Label Content="height" HorizontalAlignment="Left" Margin="62,86,0,0" VerticalAlignment="Top" AutomationProperties.Name="cameraPosition"/>
+        <Label Content="width" HorizontalAlignment="Left" Margin="12,86,0,0" VerticalAlignment="Top" AutomationProperties.Name="cameraPosition"/>
+        <Label Content="XMin" HorizontalAlignment="Left" Margin="118,86,0,0" VerticalAlignment="Top" AutomationProperties.Name="cameraPosition"/>
+        <Label Content="YMin" HorizontalAlignment="Left" Margin="170,86,0,0" VerticalAlignment="Top" AutomationProperties.Name="cameraPosition"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="14,54,0,0"   TextWrapping="Wrap" VerticalAlignment="Top" Width="47" Name="cameraAspect" Text="1.333" LostFocus="cameraAspect_LostFocus"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="66,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="47" Name="cameraFOV" Text="90" LostFocus="cameraFOV_LostFocus"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="118,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="47" Name="cameraZFar" Text="100"  LostFocus="cameraZFar_LostFocus"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="170,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="47" Name="cameraZNear" RenderTransformOrigin="0.851,1.174" Text="0.2"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="66,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="47" Name="viewHeight" Text="600" LostFocus="viewHeight_LostFocus"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="14,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="47" Name="viewWidth" Text="800" LostFocus="viewWidth_LostFocus"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="118,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="47" Name="viewXMin" Text="0" LostFocus="viewXMin_LostFocus"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="170,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="47" Name="viewYMin" Text="0" LostFocus="viewYMin_LostFocus"/>
+        <Image Name="mainImage" HorizontalAlignment="Left" Height="594" Margin="260,23,0,0" VerticalAlignment="Top" Width="823"/>
+        <Button Background="White" x:Name="LoadButton" Content="Load" HorizontalAlignment="Left" Margin="10,592,0,0" VerticalAlignment="Top" Width="103" Height="22" Click="LoadButton_Click"/>
+    </Grid>
+</Window>
